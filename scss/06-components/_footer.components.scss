@@ -1,0 +1,7 @@
+.site-footer{
+    min-height: 120px;
+    
+    & > .container{
+        border-top: $border-width solid $c-gray-90;
+    }
+}

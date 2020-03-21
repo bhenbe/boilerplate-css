@@ -1,38 +1,31 @@
-/*
- * à améliorer
- * placer les variables
- */
- 
-input[type='email'],
-input[type='number'],
-input[type='password'],
-input[type='search'],
-input[type='tel'],
-input[type='text'],
-input[type='url'],
-input[type='color'],
-input[type='date'],
-input[type='month'],
-input[type='week'],
-input[type='datetime'],
-input[type='datetime-local'],
-input:not([type]),
-textarea,
-select{
+.form-field{
+    label{
+        display: block;
+        font-size: inherit;
+        font-weight: inherit;
+        margin-bottom: .5rem;
+    }
+}
+
+.form-input{
     appearance: none;
-    background-color: transparent;
-    border: 1px solid $c-primary;
-    border-radius: 4px;
-    height: 3.8rem;
-    padding: .6rem 1.0rem;
+    background-color: $input-bgcolor;
+    border: $input-border-width $input-border-style $input-border-color;
+    border-radius: $input-border-radius;
+    height: $input-minheight;
+    padding: $input-padding;
     width: 100%;
  
     &:focus{
-        border-color: $c-primary;	
+        border-color: $input-border-color-focus;	
     }
 }
+
+.form-field-message{
+    font-size: .7em;
+}
  
-select {
+.form-select {
     background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="14" viewBox="0 0 29 14" width="29"><path fill="%23d1d1d1" d="M9.37727 3.625l5.08154 6.93523L19.54036 3.625"/></svg>') center right no-repeat;
     padding-right: 3.0rem;
  
@@ -41,25 +34,25 @@ select {
     }
 }
  
-textarea {
+textarea.form-input{
     min-height: 6.5rem;
 }
  
-label,
-legend{
+.form-label,
+.form-legend{
     display: block;
-    font-size: 1.6rem;
-    font-weight: 700;
+    font-size: inherit;
+    font-weight: inherit;
     margin-bottom: .5rem;
 }
  
-fieldset{
+.form-fieldset{
     border-width: 0;
     padding: 0;
 }
  
-input[type='checkbox'],
-input[type='radio']{
+.form-checkbox,
+.form-radio{
     display: inline;
 }
  

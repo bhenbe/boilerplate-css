@@ -1,0 +1,109 @@
+.nav {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: $nav-padding;
+  
+    .nav-list {
+      width: 100%;
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: flex-end;
+      list-style: none;
+      margin: 0;
+    }
+      
+    .nav-item {
+        &:not(.nav-brand){
+            visibility: hidden;
+            display: none;
+        }
+        height: 100%;
+        margin: 0;
+        
+        &:not(.nav-brand) > a {
+            background-color: $nav-link-bgcolor;
+            border-width: $nav-link-border-width;
+            border-style: $nav-link-border-style;
+            border-color: $nav-link-border-color;
+            color: $nav-link-color;
+            display: inline-block;
+            font-weight: $nav-link-weight;
+            margin: $nav-link-margin;
+            padding: $nav-link-padding;
+            text-decoration: $nav-link-decoration;
+            text-transform: $nav-link-transform;
+        
+            &:hover,
+            &:active,
+            &:focus{
+                background-color: $nav-link-bgcolor-hover;
+                border-width: $nav-link-border-width-hover;
+                border-style: $nav-link-border-style-hover;
+                border-color: $nav-link-border-color-hover;
+                color: $nav-link-color-hover;
+                font-weight: $nav-link-weight-hover;
+                margin: $nav-link-margin-hover;
+                padding: $nav-link-padding-hover;
+                text-decoration: $nav-link-decoration-hover;
+                text-transform: $nav-link-transform-hover;
+            }
+        }
+
+        &:not(.nav-brand):last-child > a {
+            margin: $nav-last-link-margin;
+
+            &:hover,
+            &:active,
+            &:focus{
+                margin: $nav-last-link-margin-hover;
+            }
+        }
+    }
+    
+    &.navbar--active{
+        .navbar-item:not(.navbar-brand){
+            visibility: visible;
+            display: block;
+            a{
+                display: block;
+            }
+        }
+    }
+    
+    .nav-brand{
+        margin-right: auto;
+    }
+  
+    .nav-toggle {
+        position: absolute;
+        top: 10px;
+        right: 16px;
+        padding: 12px 24px;
+        border: none;
+        background: transparent;
+        font-size: 1rem;
+        cursor: pointer;
+    }
+    
+    @media(min-width: $mq-md){
+        .nav-list{
+            flex-flow: row nowrap;
+        }
+      
+        .nav-item:not(.nav-brand){
+            visibility: visible;
+            display: inline-block;
+
+            & > a {
+                transition: all $transition-duration $transition-type;
+            }
+        }
+      
+        .nav-toggle {
+            visibility: hidden;
+            display: none;
+        }
+    }
+}

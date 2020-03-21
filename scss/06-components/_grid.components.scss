@@ -1,3 +1,19 @@
+:root{
+	--gap: #{$grid-gap-xs};
+	
+	@media only screen and (min-width: $mq-sm){
+		--gap: #{$grid-gap-sm};
+	}
+	
+	@media only screen and (min-width: $mq-md){
+		--gap: #{$grid-gap-md};
+	}
+	
+	@media only screen and (min-width: $mq-lg){
+		--gap: #{$grid-gap-lg};
+	}
+}
+
 .container,
 .container-fluid{
 	margin: 0 auto;
@@ -8,11 +24,6 @@
 	@supports(display: grid) {
 		padding-left: var(--gap, $grid-gap-base);
 		padding-right: var(--gap, $grid-gap-base);
-	}
-	
-	&.no-padding{
-		padding-left: 0;
-		padding-right: 0;
 	}
 }
 
@@ -33,6 +44,16 @@
 		padding-right: $grid-gap-base;
 		padding-left: $grid-gap-base;
 		width: 100%;
+		
+		/*** only for example ***/
+		& > span.example{
+			display: block;
+			padding: 1rem;
+			margin-bottom: 1rem;
+			background-color: #02AE3D;
+			color: white;
+			font-family: sans-serif;
+		}
 	}
 	
 	@each $column in $grid-columns {
