@@ -1,17 +1,17 @@
 :root{
-    --fontsize: $font-size-medium;
-    --lineheight: $line-height-medium;
+    --fontsize: $font-size-md;
+    --lineheight: $line-height-md;
 
     @media(min-width: 40rem){
-        --fontsize: $font-size-large;
-        --lineheight: $line-height-large;
+        --fontsize: $font-size-lg;
+        --lineheight: $line-height-lg;
     }
 }
 
 body{
-    font: $font-size-medium / $line-height-medium $font-primary;
-    font-size: var(--fontsize, $font-size-medium);
-    line-height: var(--lineheight, $line-height-large);
+    font: $font-size-md / $line-height-md $font-primary;
+    font-size: var(--fontsize, $font-size-md);
+    line-height: var(--lineheight, $line-height-lg);
     color: $c-font-base;
 }
 

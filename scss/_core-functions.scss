@@ -1,0 +1,7 @@
+@function px-rem($size, $ratio: 16) {
+    @return ( ($size / $ratio) * 1rem );
+}
+
+@function px-em($size, $ratio: 16) {
+    @return ( ($size / $ratio) * 1em );
+}

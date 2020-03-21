@@ -1,7 +1,30 @@
-@import "./01-settings/*.scss";
-@import "./02-tools/*.scss";
-@import "./03-generic/*.scss";
-@import "./04-elements/*.scss";
-@import "./05-objects/*.scss";
-@import "./06-components/*.scss";
-//@import "./07-utilities/*.scss";
+/*** settings ***/
+@import "core-functions.scss";
+@import "variables.scss";
+@import "./01-settings/typography.settings.scss";
+
+/*** tools ***/
+@import "./02-tools/clearfix.tools.scss";
+@import "./02-tools/grid.tools.scss";
+
+/*** generic ***/
+@import "./03-generic/box-sizing.generic.scss";
+@import "./03-generic/print.generic.scss";
+@import "./03-generic/modern-reset.generic.scss";
+@import "./03-generic/typography.generic.scss";
+@import "./03-generic/grid.generic.scss";
+
+/*** elements ***/
+@import "./04-elements/form.elements.scss";
+@import "./04-elements/heading.elements.scss";
+@import "./04-elements/table.elements.scss";
+
+/*** objects ***/
+@import "./05-objects/button.objects.scss";
+@import "./05-objects/visually-hidden.objects.scss";
+
+/*** components ***/
+@import "./06-components/grid.components.scss";
+
+/*** utilities ***/
+@import "./07-utilities/print.utilities.scss";

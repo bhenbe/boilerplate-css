@@ -1,0 +1,52 @@
+h1, h2, h3, h4, h5, h6{
+    font: $h6-size-xs / $line-height-sm $font-primary;
+    font-weight: 700;
+    margin-bottom: $text-spacer-bottom;
+    margin-top: $text-spacer-top;
+}
+
+h1{
+    font-size: $h1-size-xs;
+}
+
+h2{
+    font-size: $h2-size-xs;
+}
+
+h3{
+    font-size: $h3-size-xs;
+}
+
+h4{
+    font-size: $h4-size-xs;
+}
+
+h5{
+    font-size: $h5-size-xs;
+}
+
+@media(min-width: $mq-md){
+    h1{
+        font-size: $h1-size-md;
+    }
+    
+    h2{
+        font-size: $h2-size-md;
+    }
+    
+    h3{
+        font-size: $h3-size-md;
+    }
+    
+    h4{
+        font-size: $h4-size-md;
+    }
+    
+    h5{
+        font-size: $h5-size-md;
+    }
+
+    h6{
+        font-size: $h6-size-md;
+    }
+}
