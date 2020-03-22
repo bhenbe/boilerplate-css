@@ -1,0 +1,95 @@
+.dropdown-menu {
+    background-color: $dropdown-bgcolor;
+    background-clip: padding-box;
+    border: $dropdown-border-width $dropdown-border-style $dropdown-border-color;
+    border-radius: $dropdown-border-radius;
+    box-shadow: $dropdown-box-shadow;
+    left: -25000px; /*** always hidden on the left ***/
+    list-style: none;
+    margin-top: $dropdown-spacing;
+    min-width: $dropdown-min-width;
+    padding: $dropdown-padding;
+    position: absolute;
+    text-align: left;
+    top: 100%;
+    z-index: $dropdown-z-index;
+
+    &.dropdown-left{
+        margin-top: 0;
+        margin-right: $dropdown-spacing;
+    }
+
+    &.dropdown-right{
+        margin-top: 0;
+        margin-right: $dropdown-spacing;
+    }
+
+    &.dropdown-top{
+        margin-top: 0;
+        margin-bottom: $dropdown-spacing;
+    }
+
+    &.dropdown-opened{
+        left: 0;
+
+        &.dropdown-left{
+            top: 0;
+            right: 100%;
+            left: auto;
+        }
+
+        &.dropdown-right{
+            top: 0;
+            right: 100%;
+            left: auto;
+        }
+
+        &.dropdown-top{
+            top: auto;
+            bottom: 100%;
+        }
+    }
+
+    .dropdown-divider {
+        height: 0;
+        margin: $dropdown-spacing 0;
+        overflow: hidden;
+        border-top: $dropdown-divider-width $dropdown-divider-style $dropdown-divider-bgcolor;
+    }
+
+    li.dropdown-item{
+        display: block;
+        width: 100%;
+    }
+
+    a.dropdown-item,
+    .dropdown-item > a {
+        display: block;
+        width: 100%; 
+        padding: $dropdown-link-padding;
+        clear: both;
+        font-weight: $dropdownlink-font-weight;
+        color: $dropdown-link-color;
+        text-align: inherit; 
+        text-decoration: $dropdown-link-text-decoration;
+        white-space: nowrap; 
+        background-color: transparent; 
+        border: 0; 
+
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: $dropdown-link-bgcolor-hover;
+            color: $dropdown-link-color-hover;
+            text-decoration: $dropdown-link-text-decoration-hover;
+        }
+    }
+
+    .dropdown-header {
+        color: $dropdown-header-color;
+        display: block;
+        margin-bottom: 0;
+        padding: $dropdown-header-padding;
+        white-space: nowrap;
+    }
+}

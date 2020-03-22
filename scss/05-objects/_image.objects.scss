@@ -1,14 +1,14 @@
 .img-fluid {
+    height: auto;
     max-width: 100%;
     width: auto;
-    height: auto;
 }
   
 .img-thumbnail {
-    width: $thumbnail-width;
-    height: $thumbnail-height;
     border-radius: $thumbnail-border-radius;
+    height: $thumbnail-height;
     object-fit: $thumbnail-object-fit;
+    width: $thumbnail-width;
 }
   
 .figure {
@@ -16,8 +16,8 @@
 }
   
 .figure-img {
-    margin-bottom: $spacer / 2;
     line-height: 1;
+    margin-bottom: $fig-margin-bottom;
 }
   
 .figure-caption {

@@ -17,9 +17,13 @@ $c-white: hsl(0, 0%, 100%) !default;
 
 /*** opacity ***/
 $c-gray-80-10: hsla(187, 9%, 80%, .1) !default;
+$c-gray-00-10: hsla(189, 66%, 8%, .1) !default;
 
 /*** gradients ***/
 $c-gradient-red-purple-45: linear-gradient(45deg, $c-red-50 0%, $c-pink-30 50%, $c-purple-20 100%);
+
+/*** shadows ***/
+$c-shadow-base: 0 4px 8px $c-gray-00-10;
 
 /*** used colors ***/
 
@@ -31,6 +35,8 @@ $c-theme-gray-light: $c-gray-30;
 $c-theme-gray-lightest: $c-gray-90;
  
 $c-theme-font: $c-gray-00;
+
+$c-theme-shadow-dark: $c-shadow-base;
 
 /*
  * Utility colors
@@ -121,6 +127,7 @@ $website_url: "bhen.be";
 
 $border-width: px-rem(3);
 $border-radius: px-rem(4);
+$border-radius-lg: 50%;
 
 /*
  * Media queries
@@ -167,6 +174,7 @@ $thumbnail-object-fit: cover;
 $fig-caption-size: $font-size-sm;
 $fig-caption-color: $c-theme-gray-light;
 $fig-caption-style: italic; 
+$fig-margin-bottom: $spacing-md;
 
 
 /*
@@ -263,3 +271,57 @@ $nav-last-link-margin-hover: 0 ($spacing-md * 2) 0 0;
 $nav-link-padding-hover: $spacing-md $spacing-md ($spacing-md - $spacing-xs) $spacing-md;
 $nav-link-weight-hover: 700;
 $nav-link-transform-hover: unset;
+
+
+/*
+ * Dropdown
+ */
+
+$dropdown-bgcolor: $c-white;
+$dropdown-border-width: 1px; 
+$dropdown-border-style: solid;
+$dropdown-border-color: $c-theme-gray-light;
+$dropdown-border-radius: $border-radius;
+$dropdown-box-shadow: $c-theme-shadow-dark;
+$dropdown-spacing: $spacing-md;
+$dropdown-min-width: 200px;
+$dropdown-padding: $spacing-md;
+$dropdown-z-index: 400;
+$dropdown-divider-width: 1px; 
+$dropdown-divider-style: solid; 
+$dropdown-divider-bgcolor: $c-theme-gray-light;
+$dropdown-link-padding: $spacing-md;
+$dropdownlink-font-weight: 400;
+$dropdown-link-color: $c-theme-gray;
+$dropdown-link-text-decoration: none;
+$dropdown-link-bgcolor-hover: $c-theme-red;
+$dropdown-link-color-hover: $c-white;
+$dropdown-link-text-decoration-hover: none;
+$dropdown-header-color: $c-theme-gray;
+$dropdown-header-padding: $spacing-md;
+
+/*
+ * Badge
+ */
+
+$badge-background-color: $c-theme-red;
+$badge-border-radius: $border-radius-lg;
+$badge-color: $c-white;
+$badge-font-size: $font-size-sm;
+$badge-font-weight: 700; 
+$badge-padding: $spacing-xs;
+
+
+/*
+ * Breadcrumb
+ */
+
+$breadcrumb-bgcolor: $c-theme-gray-lightest;
+$breadcrumb-border-radius: $border-radius;
+$breacrumb-font-size: $font-size-sm;
+$breadcrumb-margin-bottom: $spacing-md;
+$breadcrumb-padding: $spacing-md;
+$breadcrumb-item-padding: $spacing-md;
+$breadcrumb-link-color: $c-theme-red;
+$breadcrumb-active-color: $c-theme-purple;
+$breadcrumb-divider-color: $c-theme-gray-light;

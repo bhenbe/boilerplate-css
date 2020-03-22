@@ -20,8 +20,12 @@
 //@import "./04-elements/table.elements.scss";
 
 /*** objects ***/
+@import "./05-objects/image.objects.scss";
 @import "./05-objects/button.objects.scss";
 @import "./05-objects/alert.objects.scss";
+@import "./05-objects/dropdown.objects.scss";
+@import "./05-objects/breadcrumb.objects.scss";
+@import "./05-objects/badge.objects.scss";
 @import "./05-objects/visually-hidden.objects.scss";
 
 /*** global components ***/
