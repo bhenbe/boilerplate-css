@@ -19,6 +19,8 @@ $c-white: hsl(0, 0%, 100%) !default;
 $c-gray-80-10: hsla(187, 9%, 80%, .1) !default;
 $c-gray-00-10: hsla(189, 66%, 8%, .1) !default;
 
+$c-info-40-40: hsla(202, 100%, 43%, .4) !default;
+
 /*** gradients ***/
 $c-gradient-red-purple-45: linear-gradient(45deg, $c-red-50 0%, $c-pink-30 50%, $c-purple-20 100%);
 
@@ -32,6 +34,7 @@ $c-theme-purple: $c-purple-20;
 
 $c-theme-gray: $c-gray-00;
 $c-theme-gray-light: $c-gray-30;
+$c-theme-gray-lighter: $c-gray-80;
 $c-theme-gray-lightest: $c-gray-90;
  
 $c-theme-font: $c-gray-00;
@@ -181,15 +184,32 @@ $fig-margin-bottom: $spacing-md;
  * Form
  */
 
-$input-bgcolor: $c-white;
-$input-border-width: $border-width;
-$input-border-style: solid;
-$input-border-color: $c-gray-30;
-$input-border-radius: $border-radius;
-$input-minheight: px-rem(44);
-$input-padding: $spacing-sm;
-$input-border-color-focus: $c-info-40;	
+$fieldset-border-width: 1px;
+$fieldset-border-style: solid;
+$fieldset-border-color: $c-theme-gray-light;
+$fieldset-spacing: $spacing-md;
 
+$label-color: $c-theme-gray;
+$label-weight: 700;
+
+$input-bgcolor: $c-white;
+$input-border-width: 1px;
+$input-border-style: solid;
+$input-border-color: $c-theme-gray-lighter;
+$input-border-color-focus: $c-info-40;
+$input-border-radius: $border-radius;
+$input-height: px-rem(44);
+$input-padding: $spacing-sm;	
+$input-box-shadow: 1px 1px 3px $c-theme-gray-lighter inset;
+$input-box-shadow-focus: 0 1px 3px $c-info-40-40, 1px 1px 3px $c-theme-gray-lighter inset;
+$input-color: $c-theme-gray;
+$input-font-weight: 400;
+$input-line-height: 1;
+$input-transition: all $transition-duration $transition-type;
+
+$placeholder-opacity: .3;
+$placeholder-color: $input-color;
+$placeholder-style: italic;
 
 /*
  * Table
@@ -300,6 +320,7 @@ $dropdown-link-text-decoration-hover: none;
 $dropdown-header-color: $c-theme-gray;
 $dropdown-header-padding: $spacing-md;
 
+
 /*
  * Badge
  */
@@ -310,6 +331,26 @@ $badge-color: $c-white;
 $badge-font-size: $font-size-sm;
 $badge-font-weight: 700; 
 $badge-padding: $spacing-xs;
+
+
+/*
+ * Label
+ */
+
+$label-border-radius: $border-radius;
+$label-color: $c-theme-gray;
+$label-font-size: $font-size-sm;
+$label-font-weight: 700;
+$label-line-height: $line-height-sm;
+$label-padding: 2px 4px;
+
+$label-colors: (
+    "primary": $c-theme-red,
+    "success": $success,
+    "info": $info,
+    "warning": $warning,
+    "danger": $danger
+) !default;
 
 
 /*
