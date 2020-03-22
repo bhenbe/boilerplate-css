@@ -204,12 +204,17 @@ $input-box-shadow: 1px 1px 3px $c-theme-gray-lighter inset;
 $input-box-shadow-focus: 0 1px 3px $c-info-40-40, 1px 1px 3px $c-theme-gray-lighter inset;
 $input-color: $c-theme-gray;
 $input-font-weight: 400;
-$input-line-height: 1;
+$input-line-height: 1.3;
 $input-transition: all $transition-duration $transition-type;
 
 $placeholder-opacity: .3;
 $placeholder-color: $input-color;
 $placeholder-style: italic;
+
+$select-bg-position: 98% 18px;
+$select-bg-size: 16px auto;
+
+$form-group-margin-bottom: $spacing-md * 2;
 
 /*
  * Table
@@ -272,7 +277,7 @@ $nav-link-bgcolor: transparent;
 $nav-link-border-width: 0 0 $spacing-xs 0;
 $nav-link-border-style: solid;
 $nav-link-border-color: transparent;
-$nav-link-color: $c-white;
+$nav-link-color: $c-theme-gray;
 $nav-link-decoration: none;
 $nav-link-margin: 0 ($spacing-md * 2) 0 0;
 $nav-last-link-margin: 0 ($spacing-md * 2) 0 0;
@@ -291,6 +296,17 @@ $nav-last-link-margin-hover: 0 ($spacing-md * 2) 0 0;
 $nav-link-padding-hover: $spacing-md $spacing-md ($spacing-md - $spacing-xs) $spacing-md;
 $nav-link-weight-hover: 700;
 $nav-link-transform-hover: unset;
+
+$nav-toggle-x: 10px;
+$nav-toggle-y: 16px;
+
+$nav-inverse-link-bgcolor: transparent;
+$nav-inverse-link-border-color: transparent;
+$nav-inverse-link-color: $c-white;
+
+$nav-inverse-link-bgcolor-hover: transparent;
+$nav-inverse-link-border-color-hover: $c-theme-red;
+$nav-inverse-link-color-hover: $c-theme-red;
 
 
 /*

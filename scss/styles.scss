@@ -21,6 +21,7 @@
 
 /*** objects ***/
 @import "./05-objects/image.objects.scss";
+@import "./05-objects/form.objects.scss";
 @import "./05-objects/button.objects.scss";
 @import "./05-objects/alert.objects.scss";
 @import "./05-objects/dropdown.objects.scss";
@@ -39,6 +40,9 @@
 @import "./06-components/theme/block-check-elligibility.components.scss";
 @import "./06-components/theme/block-about.components.scss";
 @import "./06-components/theme/footer.components.scss";
+
+@import "./06-components/theme/step1.components.scss";
+@import "./06-components/theme/step2.components.scss";
 
 /*** utilities ***/
 @import "./07-utilities/print.utilities.scss";

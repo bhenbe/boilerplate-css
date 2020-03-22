@@ -49,7 +49,7 @@
                 text-decoration: $nav-link-decoration-hover;
                 text-transform: $nav-link-transform-hover;
             }
-        }
+        } 
 
         &:not(.nav-brand):last-child > a {
             margin: $nav-last-link-margin;
@@ -78,12 +78,15 @@
   
     .nav-toggle {
         position: absolute;
-        top: 10px;
-        right: 16px;
-        padding: 12px 24px;
-        border: none;
+        top: $nav-toggle-x;
+        right: $nav-toggle-y;
+        padding: $nav-link-padding-hover;
+        border-width: $nav-link-border-width;
+        border-style: $nav-link-border-style;
+        border-color: $nav-link-border-color;
         border-radius: $border-radius;
-        background: $c-white;
+        background: $nav-link-bgcolor;
+        color: $nav-link-color;
         font-size: 1rem;
         font-weight: 700;
         cursor: pointer;
@@ -106,6 +109,20 @@
         .nav-toggle {
             visibility: hidden;
             display: none;
+        }
+    }
+
+    &.nav-inverse{
+        .nav-item:not(.nav-brand) > a {
+            background-color: $nav-inverse-link-bgcolor;
+            border-color: $nav-inverse-link-border-color;
+            color: $nav-inverse-link-color;
+        }
+
+        .nav-toggle {
+            background-color: $nav-inverse-link-bgcolor;
+            border-color: $nav-inverse-link-border-color;
+            color: $nav-inverse-link-color; 
         }
     }
 }

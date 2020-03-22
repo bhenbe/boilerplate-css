@@ -101,7 +101,8 @@ textarea {
 }
 
 input, 
-textarea{
+textarea,
+select{
     background-clip: padding-box;
     background-color: $input-bgcolor;
     border: $input-border-width $input-border-style $input-border-color;
@@ -125,8 +126,25 @@ textarea{
     }
 }
 
-::placeholder{
+[type="checkbox"],
+[type="radio"] {
+    display: inline-block;
+    min-height: unset;
+    width: auto;
+}
+
+input::placeholder,
+textarea::placeholder,
+select::placeholder{
     opacity: $placeholder-opacity;
     color: $placeholder-color;
     font-style: $placeholder-style;
+}
+
+select{
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg viewBox='0 0 16 10' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg stroke='none' stroke-width='1' fill='currentColor' fill-rule='nonzero'%3E%3Cpath d='M6.93933983,9.53753702 C7.48851461,10.1156157 8.35757702,10.1517457 8.94673776,9.64592678 L9.06066017,9.53753702 L15.5606602,2.69543176 C16.1464466,2.07881446 16.1464466,1.07908028 15.5606602,0.462462977 C15.0114854,-0.115615744 14.142423,-0.151745664 13.5532622,0.354073217 L13.4393398,0.462462977 L8,6.18842105 L2.56066017,0.462462977 C2.01148539,-0.115615744 1.14242298,-0.151745664 0.553262238,0.354073217 L0.439339828,0.462462977 C-0.109834957,1.0405417 -0.144158381,1.95534424 0.336369556,2.57551343 L0.439339828,2.69543176 L6.93933983,9.53753702 Z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: $select-bg-position;
+    background-size: $select-bg-size;
 }
