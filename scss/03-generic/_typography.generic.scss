@@ -15,7 +15,7 @@ body{
     }
     font-size: var(--fontsize, $font-size-md);
     line-height: var(--lineheight, $line-height-lg);
-    color: $c-font-base;
+    color: $c-theme-font;
 }
 
 p{

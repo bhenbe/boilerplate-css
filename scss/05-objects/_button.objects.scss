@@ -1,82 +1,77 @@
-.button,
-button,
-input[type='button'],
-input[type='reset'],
-input[type='submit']{
-    background-color: $btn-bgcolor;
-    border: $btn-border-with $btn-border-style $btn-border-color;
-    border-radius: $btn-border-radius;
-    color: $btn-color;
-    cursor: pointer;
+.btn {
     display: inline-block;
-    font-size: $btn-font-size;
+    font-family: $btn-font-family;
     font-weight: $btn-font-weight;
-    letter-spacing: 0;
-    line-height: 1;
-    padding: $btn-padding;
+    font-size: $btn-font-size;
+    line-height: $btn-line-height;
+    color: $c-theme-font;
     text-align: center;
     text-decoration: none;
     white-space: nowrap;
- 
-    &:focus,
-    &:hover{
-        background-color: $btn-bgcolor-hover;
-        border-color: $btn-border-color-hover;
-        color: $btn-color-hover;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    background-color: transparent;
+    border: $btn-border-width $btn-border-style transparent;
+    border-radius: $btn-border-radius;
+    padding: $btn-padding;
+    transition: $btn-transition;
+  
+    &:hover,
+    &:active,
+    &:focus{
+        color: $c-theme-font;
+        text-decoration: underline;
     }
- 
-    &[disabled]{
-        cursor: default;
-        opacity: .5;
-        background-color: $btn-disabled-bgcolor;
-        border-color: $btn-disabled-border-color;
-        color: $btn-disabled-color;
- 
-        &:focus,
-        &:hover{
-            background-color: $btn-disabled-bgcolor-hover;
-            border-color: $btn-disabled-border-color-hover;
-            color: $btn-disabled-color-hover;
+  
+    &.btn-disabled,
+    fieldset:disabled & {
+        pointer-events: none;
+    }
+}
+  
+  
+@each $color, $value in $btn-colors {
+    .btn-#{$color} {
+        color: $c-white;
+        background-color: $value;
+        border-color: $value;
+
+        &:hover,
+        &:active,
+        &:focus{
+            color: $c-white;
+            background-color: darken($value, $btn-hover-ratio);
+            border-color: darken($value, $btn-hover-ratio);
+            text-decoration: none;
         }
     }
- 
-    &.button-outline{
-         background-color: transparent;
-         color: $c-primary;
- 
-         &:focus,
-         &:hover{
-             background-color: transparent;
-             border-color: darken($c-primary, 10%);
-             color: darken($c-primary, 10%);
-         }
- 
-         &[disabled]{
-             &:focus,
-             &:hover{
-                 border-color: inherit;
-                 color: $c-primary;
-             }
-         }
-     }
- 
-     &.button-clear{
+}
+
+@each $color, $value in $btn-colors {
+    .btn-outline-#{$color} {
+        color: $value;
         background-color: transparent;
-        border-color: transparent;
-        color: $c-primary;
- 
-        &:focus,
-        &:hover{
+        border-color: $value;
+
+        &:hover,
+        &:active,
+        &:focus{
+            color: darken($value, $btn-hover-ratio);
             background-color: transparent;
-            border-color: transparent;
-            color: darken($c-primary, 10%);
-        }
- 
-        &[disabled]{
-            &:focus,
-            &:hover{
-                color: $c-primary;
-            }
+            border-color: darken($value, $btn-hover-ratio);
+            text-decoration: none;
         }
     }
+}
+
+  
+.btn-sm {
+    padding: $btn-padding-small;
+    font-size: $btn-font-size-small;
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
 }

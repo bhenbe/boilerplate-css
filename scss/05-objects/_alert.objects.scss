@@ -1,0 +1,37 @@
+.alert {
+  border: $alert-border-width $alert-border-style transparent;
+  border-radius: $alert-border-radius;
+  margin-bottom: $alert-margin-bottom;
+  padding: $alert-padding;
+  position: relative;
+}
+  
+.alert-heading {
+  color: inherit;
+}
+  
+.alert-link {
+  font-weight: $alert-link-font-weight;
+}
+  
+@each $color, $value in $utility-colors {
+  .alert-#{$color} {
+    color: $c-white;
+    background-color: $value;
+    border-color: $value;
+
+    .alert-link {
+      color: $c-white;
+    }
+  }
+
+  .alert-light-#{$color} {
+    color: $value;
+    background-color: lighten($value, 60%);
+    border-color: $value;
+
+    .alert-link {
+      color: darken($value, 10%);
+    }
+  }
+}

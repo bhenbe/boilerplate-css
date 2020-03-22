@@ -17,19 +17,23 @@
 /*** elements ***/
 @import "./04-elements/form.elements.scss";
 @import "./04-elements/heading.elements.scss";
-@import "./04-elements/table.elements.scss";
+//@import "./04-elements/table.elements.scss";
 
 /*** objects ***/
 @import "./05-objects/button.objects.scss";
+@import "./05-objects/alert.objects.scss";
 @import "./05-objects/visually-hidden.objects.scss";
 
-/*** components ***/
-@import "./06-components/grid.components.scss";
-@import "./06-components/header.components.scss";
-@import "./06-components/nav.components.scss";
-@import "./06-components/main.components.scss";
-@import "./06-components/block-check-elligibility.components.scss";
-@import "./06-components/footer.components.scss";
+/*** global components ***/
+@import "./06-components/global/grid.components.scss";
+@import "./06-components/global/nav.components.scss";
+
+/*** theme components ***/
+@import "./06-components/theme/header.components.scss";
+@import "./06-components/theme/main.components.scss";
+@import "./06-components/theme/block-check-elligibility.components.scss";
+@import "./06-components/theme/block-about.components.scss";
+@import "./06-components/theme/footer.components.scss";
 
 /*** utilities ***/
 @import "./07-utilities/print.utilities.scss";

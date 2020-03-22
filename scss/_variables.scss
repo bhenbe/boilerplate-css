@@ -2,89 +2,108 @@
  * Theme colors
  */
 
-$c-purple-20: hsl(312, 100%, 25%);
+$c-purple-20: hsl(312, 100%, 25%) !default;
 
-$c-pink-30: hsl(332, 100%, 39%);
+$c-pink-30: hsl(332, 100%, 39%) !default;
 
-$c-red-50: hsl(350, 85%, 53%);
+$c-red-50: hsl(350, 85%, 53%) !default;
 
-$c-gray-00: hsl(189, 66%, 8%);
-$c-gray-30: hsl(189, 11%, 36%);
-$c-gray-80: hsl(187, 9%, 80%);
-$c-gray-90: hsl(210, 11%, 96%);
+$c-gray-00: hsl(189, 66%, 8%) !default;
+$c-gray-30: hsl(189, 11%, 36%) !default;
+$c-gray-80: hsl(187, 9%, 80%) !default;
+$c-gray-90: hsl(210, 11%, 96%) !default;
 
-$c-white: hsl(0, 0%, 100%);
+$c-white: hsl(0, 0%, 100%) !default;
 
 /*** opacity ***/
-$c-gray-80-10: hsla(187, 9%, 80%, .1);
+$c-gray-80-10: hsla(187, 9%, 80%, .1) !default;
+
+/*** gradients ***/
+$c-gradient-red-purple-45: linear-gradient(45deg, $c-red-50 0%, $c-pink-30 50%, $c-purple-20 100%);
+
+/*** used colors ***/
+
+$c-theme-red: $c-red-50;
+$c-theme-purple: $c-purple-20;
+
+$c-theme-gray: $c-gray-00;
+$c-theme-gray-light: $c-gray-30;
+$c-theme-gray-lightest: $c-gray-90;
+ 
+$c-theme-font: $c-gray-00;
 
 /*
  * Utility colors
  */
 
-$c-success-40: hsl(126, 62%, 41%);
-$c-success-30: hsl(126, 62%, 31%);
+$c-success-40: hsl(126, 62%, 41%) !default;
+$c-success-30: hsl(126, 62%, 31%) !default;
 
-$c-danger-40: hsl(0, 70%, 48%);
-$c-danger-30: hsl(0, 70%, 38%);
+$c-info-40: hsl(202, 100%, 43%) !default;
+$c-info-30: hsl(202, 100%, 33%) !default;
 
-$c-info-40: hsl(202, 100%, 43%);
-$c-info-30: hsl(202, 100%, 33%);
+$c-danger-40: hsl(0, 70%, 48%) !default;
+$c-danger-30: hsl(0, 70%, 38%) !default;
 
-$c-warning-40: hsl(42, 70%, 48%);
-$c-warning-30: hsl(42, 70%, 38%);
+$c-warning-40: hsl(42, 70%, 48%) !default;
+$c-warning-30: hsl(42, 70%, 38%) !default;
 
-/*
- * Colors
- */
+$success: $c-success-40 !default;
+$info: $c-info-40 !default;
+$danger: $c-danger-40 !default;
+$warning: $c-warning-40 !default;
 
-$c-primary: $c-red-50;
-$c-secondary: $c-purple-20;
- 
-$c-font-base: $c-gray-00;
+$utility-colors: (
+    "success": $success,
+    "info": $info,
+    "warning": $warning,
+    "danger": $danger
+) !default;
+
 
 /*
  * Spacing
  */
 
-$margin: px-rem(16);
+$spacing-xs: px-rem(4) !default;
+$spacing-sm: px-rem(8) !default;
+$spacing-md: px-rem(16) !default;
+$spacing-lg: px-rem(32) !default;
 
-$padding-xs: px-rem(4);
-$padding-sm: px-rem(8);
-$padding-md: px-rem(16);
-$padding-lg: px-rem(32);
+$spacing-multiplier: 1, 2, 4 !default;
 
 
 /*
  * Typography
  */
 
-$font-primary: 'Inter', sans-serif;
+$font-primary: 'Inter', sans-serif !default;
 
-$font-size-md: 1rem;
-$font-size-lg: 1.125rem;
+$font-size-sm: .7rem !default;
+$font-size-md: 1rem !default;
+$font-size-lg: 1.125rem !default;
 
-$line-height-xs: 1;
-$line-height-sm: 1.1;
-$line-height-md: 1.3;
-$line-height-lg: 1.5;
+$line-height-xs: 1 !default;
+$line-height-sm: 1.1 !default;
+$line-height-md: 1.3 !default;
+$line-height-lg: 1.5 !default;
 
-$h1-size-xs: px-em(32);
-$h2-size-xs: px-em(28);
-$h3-size-xs: px-em(24);
-$h4-size-xs: px-em(21);
-$h5-size-xs: px-em(18);
-$h6-size-xs: px-em(16);
+$h1-size-xs: px-em(32) !default;
+$h2-size-xs: px-em(28) !default;
+$h3-size-xs: px-em(24) !default;
+$h4-size-xs: px-em(21) !default;
+$h5-size-xs: px-em(18) !default;
+$h6-size-xs: px-em(16) !default;
 
-$h1-size-md: px-em(44);
-$h2-size-md: px-em(36);
-$h3-size-md: px-em(32);
-$h4-size-md: px-em(27);
-$h5-size-md: px-em(24);
-$h6-size-md: px-em(21);
+$h1-size-md: px-em(44) !default;
+$h2-size-md: px-em(36) !default;
+$h3-size-md: px-em(32) !default;
+$h4-size-md: px-em(27) !default;
+$h5-size-md: px-em(24) !default;
+$h6-size-md: px-em(21) !default;
 
-$text-spacer-top: ($margin * 2);
-$text-spacer-bottom: $margin;
+$text-spacer-top: ($spacing-md * 2) !default;
+$text-spacer-bottom: $spacing-md !default;
 
 $link-decoration: underline;
 
@@ -135,6 +154,21 @@ $grid-container-maxwidth: $mq-lg;
 $grid-columns-count: 12;
 $grid-columns: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12; 
 
+
+/*
+ * Image
+ */
+
+$thumbnail-border-radius: 50%;
+$thumbnail-width: 140px;
+$thumbnail-height: 140px;
+$thumbnail-object-fit: cover;
+
+$fig-caption-size: $font-size-sm;
+$fig-caption-color: $c-theme-gray-light;
+$fig-caption-style: italic; 
+
+
 /*
  * Form
  */
@@ -145,7 +179,7 @@ $input-border-style: solid;
 $input-border-color: $c-gray-30;
 $input-border-radius: $border-radius;
 $input-minheight: px-rem(44);
-$input-padding: $padding-sm;
+$input-padding: $spacing-sm;
 $input-border-color-focus: $c-info-40;	
 
 
@@ -155,74 +189,77 @@ $input-border-color-focus: $c-info-40;
 
 
 
+
+
+
+/*
+ * Alert
+ */
+
+$alert-border-radius: $border-radius;
+$alert-border-width: $border-width;
+$alert-border-style: solid;
+$alert-margin-bottom: $spacing-md;
+$alert-padding: $spacing-md;
+$alert-link-font-weight: 700;
+
+
 /*
  * Button
  */ 
 
-$btn-hover-ratio: 10%;
-
 $btn-border-radius: $border-radius;
-$btn-border-with: $border-width;
+$btn-border-width: $border-width;
 $btn-border-style: solid;
-$btn-border-color: $c-primary;
-$btn-padding: $padding-sm $padding-lg;
-$btn-color: $c-white;
-$btn-bgcolor: $c-primary;
-$btn-font-size: $font-size-md;
+$btn-border-color: $c-theme-red;
+$btn-padding: $spacing-sm $spacing-lg;
+$btn-padding-small: $spacing-xs $spacing-sm;
+$btn-font-family: $font-primary;
+$btn-font-size: inherit;
+$btn-font-size-small: $font-size-sm;
 $btn-font-weight: 700;
+$btn-line-height: $line-height-xs;
 $btn-text-shadow: 0 0 0 rgba(0,0,0,0);
-$btn-bgcolor-hover: darken($c-primary, $btn-hover-ratio);
-$btn-border-color-hover: darken($c-primary, $btn-hover-ratio);
-$btn-color-hover: $c-white;
+$btn-hover-ratio: 10%;
+$btn-transition: all $transition-duration $transition-type;
 
-$btn-disabled-border-color: $c-gray-30;
-$btn-disabled-color: $c-white;
-$btn-disabled-bgcolor: $c-gray-30;
-$btn-disabled-border-color-hover: darken($c-gray-30, $btn-hover-ratio);
-$btn-disabled-color-hover: $c-white;
-$btn-disabled-bgcolor-hover: darken($c-gray-30, $btn-hover-ratio);
-
-$btn-success-border-color: $c-success-30;
-$btn-success-color: $c-white;
-$btn-success-bgcolor: $c-success-30;
-$btn-success-border-color-hover: darken($c-success-30, $btn-hover-ratio);
-$btn-success-color-hover: $c-white;
-$btn-success-bgcolor-hover: darken($c-success-30, $btn-hover-ratio);
-
-$btn-info-border-color: $c-info-30;
-$btn-info-color: $c-white;
-$btn-info-bgcolor: $c-info-30;
-$btn-info-border-color-hover: darken($c-info-30, $btn-hover-ratio);
-$btn-info-color-hover: $c-white;
-$btn-info-bgcolor-hover: darken($c-info-30, $btn-hover-ratio);
+$btn-colors: (
+    "primary": $c-theme-red,
+    "disabled": $c-theme-gray-light,
+    "white": $c-white,
+    "success": $success,
+    "info": $info,
+    "warning": $warning,
+    "danger": $danger
+) !default;
 
 
 /*
  * Nav
  */
 
-$nav-padding: $padding-md 0;
+$nav-padding: $spacing-md 0;
 
 $nav-link-bgcolor: transparent;
-$nav-link-border-width: 0 0 $padding-xs 0;
+$nav-link-border-width: 0 0 $spacing-xs 0;
 $nav-link-border-style: solid;
 $nav-link-border-color: transparent;
 $nav-link-color: $c-white;
 $nav-link-decoration: none;
-$nav-link-margin: 0 ($padding-md * 2) 0 0;
-$nav-last-link-margin: 0 ($padding-md * 2) 0 0;
-$nav-link-padding: $padding-md $padding-md ($padding-md - $padding-xs) $padding-md;
+$nav-link-margin: 0 ($spacing-md * 2) 0 0;
+$nav-last-link-margin: 0 ($spacing-md * 2) 0 0;
+$nav-link-padding: $spacing-md $spacing-md ($spacing-md - $spacing-xs) $spacing-md;
 $nav-link-weight: 700;
 $nav-link-transform: unset;
 
 $nav-link-bgcolor-hover: transparent;
-$nav-link-border-width-hover: 0 0 $padding-xs 0;
+$nav-link-border-width-hover: 0 0 $spacing-xs 0;
 $nav-link-border-style-hover: solid;
-$nav-link-border-color-hover: $c-primary;
-$nav-link-color-hover: $c-primary;
+$nav-link-border-color-hover: $c-theme-red;
+$nav-link-color-hover: $c-theme-red;
 $nav-link-decoration-hover: none;
-$nav-link-margin-hover: 0 ($padding-md * 2) 0 0;
-$nav-last-link-margin-hover: 0 ($padding-md * 2) 0 0;
-$nav-link-padding-hover: $padding-md $padding-md ($padding-md - $padding-xs) $padding-md;
+$nav-link-margin-hover: 0 ($spacing-md * 2) 0 0;
+$nav-last-link-margin-hover: 0 ($spacing-md * 2) 0 0;
+$nav-link-padding-hover: $spacing-md $spacing-md ($spacing-md - $spacing-xs) $spacing-md;
 $nav-link-weight-hover: 700;
 $nav-link-transform-hover: unset;

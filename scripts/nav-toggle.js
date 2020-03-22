@@ -5,7 +5,7 @@ toggle.addEventListener('click', (e) => {
   e.target.setAttribute('aria-pressed', String(!pressed));
   /***toggle***/
   e.preventDefault();
-  [].map.call(document.querySelectorAll('.navbar'), function(el) {
-    el.classList.toggle('navbar--active');
+  [].map.call(document.querySelectorAll('.nav'), function(el) {
+    el.classList.toggle('nav--active');
   });
 });

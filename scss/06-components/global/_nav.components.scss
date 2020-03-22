@@ -62,8 +62,8 @@
         }
     }
     
-    &.navbar--active{
-        .navbar-item:not(.navbar-brand){
+    &.nav--active{
+        .nav-item:not(.nav-brand){
             visibility: visible;
             display: block;
             a{
@@ -82,8 +82,10 @@
         right: 16px;
         padding: 12px 24px;
         border: none;
-        background: transparent;
+        border-radius: $border-radius;
+        background: $c-white;
         font-size: 1rem;
+        font-weight: 700;
         cursor: pointer;
     }
     

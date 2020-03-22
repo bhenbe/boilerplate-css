@@ -1,0 +1,27 @@
+.img-fluid {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+}
+  
+.img-thumbnail {
+    width: $thumbnail-width;
+    height: $thumbnail-height;
+    border-radius: $thumbnail-border-radius;
+    object-fit: $thumbnail-object-fit;
+}
+  
+.figure {
+    display: inline-block;
+}
+  
+.figure-img {
+    margin-bottom: $spacer / 2;
+    line-height: 1;
+}
+  
+.figure-caption {
+    color: $fig-caption-color;
+    font-size: $fig-caption-size;
+    font-style: $fig-caption-style;
+}

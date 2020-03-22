@@ -10,8 +10,8 @@ table{
 
 td,
 th{
-	border-bottom: 1px solid $c-primary;
-	padding: 1.2rem 1.5rem;
+	border-bottom: $table-border-width $table-border-style $table-border-color;
+	padding: $table-padding;
 	text-align: left;
 
 	&:first-child{
@@ -23,19 +23,19 @@ th{
 	}
 }
 
-@media screen and (max-width: 40.0rem){
+@media screen and (max-width: $mq-md){
 	table{
-   	border-spacing: 0;
-   	display: flex;
+   		border-spacing: 0;
+   		display: flex;
     	width: 100%;
 	
 		thead{
-      	border-right: solid .1rem $c-primary;
+      		border-right: solid .1rem $c-primary;
 		}
 
       td,
 		th{
-      	padding-left: 0;
+      		padding-left: 0;
 		
 			&:first-child{
 				padding-left: 0;
@@ -47,15 +47,15 @@ th{
 		}
 
 		tbody{
-      	display: flex;
-      	overflow-x: auto;
-      	white-space: nowrap;
+      		display: flex;
+      		overflow-x: auto;
+      		white-space: nowrap;
 		
 			tr{
         		border-right: solid .1rem $c-primary;
 
 				&:last-child{
-          		border-right: none;
+          			border-right: none;
 				}
 			}
 		}

@@ -22,7 +22,7 @@ function style() {
           .pipe(sass())
           .on("error", sass.logError)
           .pipe(postcss([autoprefixer(), cssnano()]))
-          .pipe(sourcemaps.write())
+          .pipe(sourcemaps.write('../maps'))
           .pipe(gulp.dest(paths.styles.dest))
   );
 }
