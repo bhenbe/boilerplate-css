@@ -229,6 +229,30 @@ $table-spacing: $spacing-md;
 
 
 /*
+ * Icons
+ */
+
+ $icons-list: (
+    "chevron-down": "../icons/angle-down.svg",
+    "chevron-left": "../icons/angle-left.svg",
+    "chevron-right": "../icons/angle-right.svg",
+    "chevron-up": "../icons/angle-down.svg",
+    "arrow-down": "../icons/arrow-down.svg",
+    "arrow-left": "../icons/arrow-left.svg",
+    "arrow-right": "../icons/arrow-right.svg",
+    "arrow-up": "../icons/arrow-down.svg",
+    "success": "../icons/check.svg",
+    "error": "../icons/times.svg",
+    "info": "../icons/info-circle.svg",
+    "wait": "../icons/clock.svg"
+) !default;
+
+$icon-size-sm: $font-size-sm;
+$icon-size-md: $font-size-md;
+$icon-size-lg: $font-size-lg;
+
+
+/*
  * Alert
  */
 

@@ -1,0 +1,45 @@
+.icon{
+    display: inline-block;
+    line-height: inherit;
+    position: relative;
+    padding: $icon-size-md 0 0 $icon-size-md;
+
+    &:before{
+        background-color: transparent;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        content: "";
+        height: $icon-size-md;
+        left: 1px;
+        position: absolute;
+        top: 1px;
+        width: $icon-size-md;
+    }
+
+    &.icon-sm{
+        padding: $icon-size-sm 0 0 $icon-size-sm;
+
+        &:before{
+            height: $icon-size-sm;
+            width: $icon-size-sm;
+        }
+    }
+
+    &.icon-lg{
+        padding: $icon-size-lg 0 0 $icon-size-lg;
+
+        &:before{
+            height: $icon-size-lg;
+            width: $icon-size-lg;
+        }
+    }
+
+    @each $name, $value in $icons-list {
+        &.icon-#{$name} {
+            &:before{
+                background-image: url("#{$value}");
+            }
+        }
+    }
+}
