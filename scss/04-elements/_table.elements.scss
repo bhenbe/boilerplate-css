@@ -30,7 +30,7 @@ th{
     	width: 100%;
 	
 		thead{
-      		border-right: solid .1rem $c-primary;
+      		border-right: $table-border-width $table-border-style $table-border-color;
 		}
 
       td,
@@ -42,7 +42,7 @@ th{
 			}
 
 			&:last-child{
-         	padding-right: 1.2rem;
+         	padding-right: $table-spacing;
 			}
 		}
 
@@ -52,7 +52,7 @@ th{
       		white-space: nowrap;
 		
 			tr{
-        		border-right: solid .1rem $c-primary;
+        		border-right: $table-border-width $table-border-style $table-border-color;
 
 				&:last-child{
           			border-right: none;
@@ -65,11 +65,11 @@ th{
      		display: block;
 
 			&:first-child{
-        		padding-left: 1.2rem;
+        		padding-left: $table-spacing;
 			}
 
 			&:last-child{
-        		padding-right: 1.2rem;
+        		padding-right: $table-spacing;
 			}
 		}
 	}

@@ -18,7 +18,28 @@ body{
     color: $c-theme-font;
 }
 
-p{
+p, dl, ul, blockquote{
     margin-bottom: $text-spacer-bottom;
     margin-top: $text-spacer-top;
+}
+
+ul > li > ul{
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+dt{
+    font-weight: 700;
+}
+
+dd{
+    margin-bottom: $text-spacer-bottom;
+
+    & > *:first-child{
+        margin-top: 0;
+    }
+
+    & > dl{
+        margin-left: $text-spacer-bottom * 2;
+    }
 }

@@ -1,0 +1,9 @@
+@each $color, $value in $utility-colors {
+    .text-#{$color} {
+        color: $value;
+    }
+}
+
+.list-unstyled{
+    list-style: none;
+}

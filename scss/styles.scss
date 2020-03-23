@@ -17,7 +17,7 @@
 /*** elements ***/
 @import "./04-elements/form.elements.scss";
 @import "./04-elements/heading.elements.scss";
-//@import "./04-elements/table.elements.scss";
+@import "./04-elements/table.elements.scss";
 
 /*** objects ***/
 @import "./05-objects/image.objects.scss";
@@ -43,8 +43,10 @@
 
 @import "./06-components/theme/step1.components.scss";
 @import "./06-components/theme/step2.components.scss";
+@import "./06-components/theme/step5b.components.scss";
 
 /*** utilities ***/
 @import "./07-utilities/print.utilities.scss";
 @import "./07-utilities/core.utilities.scss";
 @import "./07-utilities/spacing.utilities.scss";
+@import "./07-utilities/typography.utilities.scss";

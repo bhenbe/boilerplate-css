@@ -220,9 +220,12 @@ $form-group-margin-bottom: $spacing-md * 2;
  * Table
  */
 
-
-
-
+$table-border-radius: $border-radius;
+$table-border-width: $border-width;
+$table-border-style: solid;
+$table-border-color: $c-theme-gray-light;
+$table-padding: $spacing-md;
+$table-spacing: $spacing-md;
 
 
 /*
