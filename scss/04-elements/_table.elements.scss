@@ -23,7 +23,7 @@ th{
 	}
 }
 
-@media screen and (max-width: $mq-md){
+@media screen and (max-width: map-get($mq, md)){
 	table{
    		border-spacing: 0;
    		display: flex;

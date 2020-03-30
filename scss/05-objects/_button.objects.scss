@@ -4,10 +4,11 @@
     font-weight: $btn-font-weight;
     font-size: $btn-font-size;
     line-height: $btn-line-height;
-    color: $c-theme-font;
+    color: $link-color;
     text-align: center;
-    text-decoration: none;
+    text-decoration: $link-decoration;
     white-space: nowrap;
+    width: 100%;
     vertical-align: middle;
     cursor: pointer;
     user-select: none;
@@ -16,12 +17,16 @@
     border-radius: $btn-border-radius;
     padding: $btn-padding;
     transition: $btn-transition;
+
+    @media(min-width: map-get($mq, sm)){
+        width: auto;
+    }
   
     &:hover,
     &:active,
     &:focus{
-        color: $c-theme-font;
-        text-decoration: underline;
+        color: $link-color-hover;
+        text-decoration: $link-decoration-hover;
     }
   
     &.btn-disabled,
@@ -36,6 +41,7 @@
         color: $c-white;
         background-color: $value;
         border-color: $value;
+        text-decoration: none;
 
         &:hover,
         &:active,
@@ -64,8 +70,7 @@
         }
     }
 }
-
-  
+ 
 .btn-sm {
     padding: $btn-padding-small;
     font-size: $btn-font-size-small;

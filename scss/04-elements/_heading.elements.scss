@@ -4,14 +4,14 @@ h3, .h3,
 h4, .h4, 
 h5, .h5,
 h6, .h6{
-    font: $h6-size-xs / $line-height-sm $font-primary;
+    font: map-get($h-size-xs, h6) / $line-height-sm $font-primary;
     font-weight: 700;
     line-height: $line-height-sm;
     margin-bottom: $text-spacer-bottom;
     margin-top: $text-spacer-top;
 
     & > .h-prefix{
-        color: $c-red-50;
+        color: $c-theme-primary;
         display: block;
         font-size: $font-size-lg;
         font-weight: 400;
@@ -19,48 +19,40 @@ h6, .h6{
     }
 }
 
-h1, .h1{
-    font-size: $h1-size-xs;
+@each $tag, $value in $h-size-xs {
+    #{$tag}, .#{$tag}{
+        font-size: $value;
+    }
 }
 
-h2, .h2{
-    font-size: $h2-size-xs;
+@media(min-width: map-get($mq, sm)){
+    @each $tag, $value in $h-size-sm {
+        #{$tag}, .#{$tag}{
+            font-size: $value;
+        }
+    }
 }
 
-h3, .h3{
-    font-size: $h3-size-xs;
+@media(min-width: map-get($mq, md)){
+    @each $tag, $value in $h-size-md {
+        #{$tag}, .#{$tag}{
+            font-size: $value;
+        }
+    }
 }
 
-h4, .h4{
-    font-size: $h4-size-xs;
+@media(min-width: map-get($mq, lg)){
+    @each $tag, $value in $h-size-lg {
+        #{$tag}, .#{$tag}{
+            font-size: $value;
+        }
+    }
 }
 
-h5, .h5{
-    font-size: $h5-size-xs;
-}
-
-@media(min-width: $mq-md){
-    h1, .h1{
-        font-size: $h1-size-md;
-    }
-    
-    h2, .h2{
-        font-size: $h2-size-md;
-    }
-    
-    h3, .h3{
-        font-size: $h3-size-md;
-    }
-    
-    h4, .h4{
-        font-size: $h4-size-md;
-    }
-    
-    h5, .h5{
-        font-size: $h5-size-md;
-    }
-
-    h6, .h6{
-        font-size: $h6-size-md;
+@media(min-width: map-get($mq, hd)){
+    @each $tag, $value in $h-size-hd {
+        #{$tag}, .#{$tag}{
+            font-size: $value;
+        }
     }
 }

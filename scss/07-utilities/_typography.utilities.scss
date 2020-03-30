@@ -4,6 +4,31 @@
     }
 }
 
-.list-unstyled{
+.list-inline{
+    display: flex;
+    flex-flow: column wrap;
+
+    li{
+        margin-bottom: map-get($spacing, md);
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+
+    @media(min-width: map-get($mq, sm)){
+        flex-flow: row wrap;
+        li{
+            margin-right: map-get($spacing, md);
+            &:last-child{
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+.list-unstyled,
+.list-inline{
     list-style: none;
+    margin: 0;
+    padding: 0;
 }

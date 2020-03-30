@@ -1,29 +1,33 @@
 :root{
-	--gap: #{$grid-gap-xs};
+	--gap: #{map-get($grid-gap, xs)};
 	
-	@media only screen and (min-width: $mq-sm){
-		--gap: #{$grid-gap-sm};
+	@media only screen and (min-width: map-get($mq, sm)){
+		--gap: #{map-get($grid-gap, sm)};
 	}
 	
-	@media only screen and (min-width: $mq-md){
-		--gap: #{$grid-gap-md};
+	@media only screen and (min-width: map-get($mq, md)){
+		--gap: #{map-get($grid-gap, md)};
 	}
 	
-	@media only screen and (min-width: $mq-lg){
-		--gap: #{$grid-gap-lg};
+	@media only screen and (min-width: map-get($mq, lg)){
+		--gap: #{map-get($grid-gap, lg)};
+	}
+
+	@media only screen and (min-width: map-get($mq, hd)){
+		--gap: #{map-get($grid-gap, hd)};
 	}
 }
 
 .container,
 .container-fluid{
 	margin: 0 auto;
-	padding-left: $grid-gap-base;
-	padding-right: $grid-gap-base;
+	padding-left: map-get($grid-gap, xs);
+	padding-right: map-get($grid-gap, xs);
 	width: 100%;
 	
 	@supports(display: grid) {
-		padding-left: var(--gap, $grid-gap-base);
-		padding-right: var(--gap, $grid-gap-base);
+		padding-left: var(--gap, map-get($grid-gap, xs));
+		padding-right: var(--gap, map-get($grid-gap, xs));
 	}
 }
 
@@ -36,24 +40,14 @@
 	flex: 0 1 auto;
 	flex-direction: row;
 	flex-wrap: wrap;
-	margin-right: ($grid-gap-base * -1);
-	margin-left: ($grid-gap-base * -1);
+	margin-right: map-get($grid-gap, xs);
+	margin-left: map-get($grid-gap, xs);
 
 	& > *[class*="col"] {
 		flex: 0 0 auto;
-		padding-right: $grid-gap-base;
-		padding-left: $grid-gap-base;
+		padding-right: map-get($grid-gap, xs);
+		padding-left: map-get($grid-gap, xs);
 		width: 100%;
-		
-		/*** only for example ***/
-		& > span.example{
-			display: block;
-			padding: 1rem;
-			margin-bottom: 1rem;
-			background-color: #02AE3D;
-			color: white;
-			font-family: sans-serif;
-		}
 	}
 	
 	@each $column in $grid-columns {
@@ -68,7 +62,7 @@
   		}
 	}
 	
-	@media only screen and (min-width: $mq-sm){
+	@media only screen and (min-width: map-get($mq, sm)){
 		@each $column in $grid-columns {
 			.col-sm-#{$column} {
 				width: (100 / ($grid-columns-count / $column)) * 1%;
@@ -82,7 +76,7 @@
 		}
 	}
 		
-	@media only screen and (min-width: $mq-md){
+	@media only screen and (min-width: map-get($mq, md)){
 		@each $column in $grid-columns {
 			.col-md-#{$column} {
 				width: (100 / ($grid-columns-count / $column)) * 1%;
@@ -96,7 +90,7 @@
 		}
 	}
 		
-	@media only screen and (min-width: $mq-lg){
+	@media only screen and (min-width: map-get($mq, lg)){
 		@each $column in $grid-columns {
 			.col-lg-#{$column} {
 				width: (100 / ($grid-columns-count / $column)) * 1%;
@@ -114,8 +108,8 @@
 		display: grid;
 		grid-template-columns: repeat(12, 1fr);
 		grid-auto-rows: auto;
-		grid-gap: 0 $grid-gap-base;
-		grid-gap: 0 var(--gap, $grid-gap-base);
+		grid-gap: 0 map-get($grid-gap, xs);
+		grid-gap: 0 var(--gap, map-get($grid-gap, xs));
 		margin-left: 0;
 		margin-right: 0;
 		
@@ -140,7 +134,7 @@
 			}
 		}
 
-		@media only screen and (min-width: $mq-sm){
+		@media only screen and (min-width: map-get($mq, sm)){
 			@each $column in $grid-columns {
 				.col-sm-#{$column} {
 					grid-column-start: auto;
@@ -155,7 +149,7 @@
 			}
 		}
 
-		@media only screen and (min-width: $mq-md){
+		@media only screen and (min-width: map-get($mq, md)){
 			@each $column in $grid-columns {
 				.col-md-#{$column} {
 					grid-column-start: auto;
@@ -170,7 +164,7 @@
 			}
 		}
 
-		@media only screen and (min-width: $mq-lg){
+		@media only screen and (min-width: map-get($mq, lg)){
 			@each $column in $grid-columns {
 				.col-lg-#{$column} {
 					grid-column-start: auto;

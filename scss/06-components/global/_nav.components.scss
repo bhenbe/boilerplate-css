@@ -27,11 +27,13 @@
             border-width: $nav-link-border-width;
             border-style: $nav-link-border-style;
             border-color: $nav-link-border-color;
+            border-radius: $nav-link-border-radius;
             color: $nav-link-color;
             display: inline-block;
             font-weight: $nav-link-weight;
-            margin: $nav-link-margin;
+            margin: 0 0 ($nav-link-spacing / 2) 0;
             padding: $nav-link-padding;
+            text-align: right;
             text-decoration: $nav-link-decoration;
             text-transform: $nav-link-transform;
         
@@ -42,9 +44,10 @@
                 border-width: $nav-link-border-width-hover;
                 border-style: $nav-link-border-style-hover;
                 border-color: $nav-link-border-color-hover;
+                border-radius: $nav-link-border-radius-hover;
                 color: $nav-link-color-hover;
                 font-weight: $nav-link-weight-hover;
-                margin: $nav-link-margin-hover;
+                margin: 0 0 ($nav-link-spacing / 2) 0;
                 padding: $nav-link-padding-hover;
                 text-decoration: $nav-link-decoration-hover;
                 text-transform: $nav-link-transform-hover;
@@ -52,17 +55,17 @@
         } 
 
         &:not(.nav-brand):last-child > a {
-            margin: $nav-last-link-margin;
+            margin-bottom: 0;
 
             &:hover,
             &:active,
             &:focus{
-                margin: $nav-last-link-margin-hover;
+                margin-bottom: 0;
             }
         }
     }
     
-    &.nav--active{
+    &.nav-active{
         .nav-item:not(.nav-brand){
             visibility: visible;
             display: block;
@@ -92,7 +95,7 @@
         cursor: pointer;
     }
     
-    @media(min-width: $mq-md){
+    @media(min-width: map-get($mq, md)){
         .nav-list{
             flex-flow: row nowrap;
         }
@@ -100,9 +103,27 @@
         .nav-item:not(.nav-brand){
             visibility: visible;
             display: inline-block;
+            text-align: center;
 
             & > a {
+                margin: 0 $nav-link-spacing 0 0;
                 transition: all $transition-duration $transition-type;
+
+                &:focus,
+                &:active,
+                &:hover{
+                    margin: 0 $nav-link-spacing 0 0;
+                }
+            }
+
+            &:last-child > a{
+                margin-right: 0;
+
+                &:focus,
+                &:active,
+                &:hover{
+                    margin-right: 0;
+                }
             }
         }
       

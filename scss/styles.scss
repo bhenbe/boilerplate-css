@@ -36,15 +36,8 @@
 @import "./06-components/global/nav.components.scss";
 
 /*** theme components ***/
-@import "./06-components/theme/header.components.scss";
-@import "./06-components/theme/main.components.scss";
-@import "./06-components/theme/block-check-elligibility.components.scss";
-@import "./06-components/theme/block-about.components.scss";
-@import "./06-components/theme/footer.components.scss";
-
-@import "./06-components/theme/step1.components.scss";
-@import "./06-components/theme/step2.components.scss";
-@import "./06-components/theme/step5b.components.scss";
+@import "./06-components/theme/nav.components.scss";
+@import "./06-components/theme/home.components.scss";
 
 /*** utilities ***/
 @import "./07-utilities/print.utilities.scss";

@@ -1,35 +1,76 @@
-@media(min-width: $mq-xs){
+@each $size, $value in $spacing{
     @each $multiplier in $spacing-multiplier {
-        .spacing-xs-#{$multiplier}{
-            margin-top: ($spacing-xs * $multiplier); 
-            margin-bottom: ($spacing-xs * $multiplier); 
+        .m-#{$size}-#{$multiplier}{
+            margin-bottom: $value;
+            margin-left: $value;
+            margin-right: $value;
+            margin-top: $value;
+        }
+
+        .mb-#{$size}-#{$multiplier}{
+            margin-bottom: $value;
+        }
+
+        .mh-#{$size}-#{$multiplier}{
+            margin-left: $value;
+            margin-right: $value;
+        }
+
+        .ml-#{$size}-#{$multiplier}{
+            margin-left: $value;
+        }
+
+        .mr-#{$size}-#{$multiplier}{
+            margin-right: $value;
+        }
+
+        .mt-#{$size}-#{$multiplier}{
+            margin-top: $value;
+        }
+
+        .mv-#{$size}-#{$multiplier}{
+            margin-bottom: $value;
+            margin-top: $value;
+        }
+
+        .p-#{$size}-#{$multiplier}{
+            padding-bottom: $value;
+            padding-left: $value;
+            padding-right: $value;
+            padding-top: $value;
+        }
+
+        .pb-#{$size}-#{$multiplier}{
+            padding-bottom: $value;
+        }
+
+        .ph-#{$size}-#{$multiplier}{
+            padding-left: $value;
+            padding-right: $value;
+        }
+
+        .pl-#{$size}-#{$multiplier}{
+            padding-left: $value;
+        }
+
+        .pr-#{$size}-#{$multiplier}{
+            padding-right: $value;
+        }
+
+        .pt-#{$size}-#{$multiplier}{
+            padding-top: $value;
+        }
+
+        .pv-#{$size}-#{$multiplier}{
+            padding-bottom: $value;
+            padding-top: $value;
         }
     }
 }
 
-@media(min-width: $mq-sm){
-    @each $multiplier in $spacing-multiplier {
-        .spacing-sm-#{$multiplier}{
-            margin-top: ($spacing-sm * $multiplier); 
-            margin-bottom: ($spacing-sm * $multiplier); 
-        }
-    }
-}
-
-@media(min-width: $mq-md){
-    @each $multiplier in $spacing-multiplier {
-        .spacing-md-#{$multiplier}{
-            margin-top: ($spacing-md * $multiplier); 
-            margin-bottom: ($spacing-md * $multiplier); 
-        }
-    }
-}
-    
-@media(min-width: $mq-lg){
-    @each $multiplier in $spacing-multiplier {
-        .spacing-lg-#{$multiplier}{
-            margin-top: ($spacing-lg * $multiplier); 
-            margin-bottom: ($spacing-lg * $multiplier); 
-        }
-    }
+.m-reset{
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
 }
